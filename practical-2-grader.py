@@ -61,32 +61,32 @@ if image is not None:
     st.header("Question 1")
     st.image(q1_region)
     
-    num1 = st.number_input(label = "Q1a) Latitude", min_value = 0, max_value = 4)
-    num2 = st.number_input(label = "Q1a) Longitude", min_value = 0, max_value = 4)
+    num1 = st.number_input(label = "Q1a) Latitude", min_value = 0, max_value = 2)
+    num2 = st.number_input(label = "Q1a) Longitude", min_value = 0, max_value = 2)
 
-    num3 = st.number_input(label = "Q1b) Latitude", min_value = 0, max_value = 4)
-    num4 = st.number_input(label = "Q1b) Longitude", min_value = 0, max_value = 4)
+    num3 = st.number_input(label = "Q1b) Latitude", min_value = 0, max_value = 2)
+    num4 = st.number_input(label = "Q1b) Longitude", min_value = 0, max_value = 2)
 
-    num5 = st.number_input(label = "Q1c) Latitude", min_value = 0, max_value = 4)
-    num6 = st.number_input(label = "Q1c) Longitude", min_value = 0, max_value = 4)
+    num5 = st.number_input(label = "Q1c) Latitude", min_value = 0, max_value = 2)
+    num6 = st.number_input(label = "Q1c) Longitude", min_value = 0, max_value = 2)
 
-    num7 = st.number_input(label = "Q1d) Latitude", min_value = 0, max_value = 4)
-    num8 = st.number_input(label = "Q1d) Longitude", min_value = 0, max_value = 4)
+    num7 = st.number_input(label = "Q1d) Latitude", min_value = 0, max_value = 2)
+    num8 = st.number_input(label = "Q1d) Longitude", min_value = 0, max_value = 2)
 
     st.header("Question 2")
     st.image(q2_region)
 
-    num9 = st.number_input(label = "Q2a) Latitude", min_value = 0, max_value = 4)
-    num10 = st.number_input(label = "Q2a) Longitude", min_value = 0, max_value = 4)
+    num9 = st.number_input(label = "Q2a) Latitude", min_value = 0, max_value = 2)
+    num10 = st.number_input(label = "Q2a) Longitude", min_value = 0, max_value = 2)
 
-    num11 = st.number_input(label = "Q2b) Latitude", min_value = 0, max_value = 4, key = "q2blat")
-    num12 = st.number_input(label = "Q2b) Longitude", min_value = 0, max_value = 4, key = "q2blon")
+    num11 = st.number_input(label = "Q2b) Latitude", min_value = 0, max_value = 2)
+    num12 = st.number_input(label = "Q2b) Longitude", min_value = 0, max_value = 2)
 
-    num13 = st.number_input(label = "Q2c) Latitude", min_value = 0, max_value = 4, key = "q2clat")
-    num14 = st.number_input(label = "Q2c) Longitude", min_value = 0, max_value = 4, key = "q2clon")
+    num13 = st.number_input(label = "Q2c) Latitude", min_value = 0, max_value = 2)
+    num14 = st.number_input(label = "Q2c) Longitude", min_value = 0, max_value = 2)
 
-    num15 = st.number_input(label = "Q2d) Latitude", min_value = 0, max_value = 4, key = "q2dlat")
-    num16 = st.number_input(label = "Q2d) Longitude", min_value = 0, max_value = 4, key = "q2dlon")
+    num15 = st.number_input(label = "Q2d) Latitude", min_value = 0, max_value = 2)
+    num16 = st.number_input(label = "Q2d) Longitude", min_value = 0, max_value = 2)
 
     if st.button("Grade"):
 
@@ -171,3 +171,4 @@ if image is not None:
 
     
     
+
