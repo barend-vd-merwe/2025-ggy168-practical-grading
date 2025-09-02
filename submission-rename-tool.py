@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 import io
 
-st.head("Submission Rename Tool")
+st.header("Submission Rename Tool")
 
 gc = st.file_uploader("Select the grades CSV file", type = "csv")
 image = st.file_uploader("Select the student submission", type = ["png", "jpg"])
@@ -27,4 +27,5 @@ if image and gc is not None:
     buffer = io.BytesIO()
     final_img_pil.save(buffer, format="PNG")
     st.download_button(label=f"Download {filename}", data=buffer, file_name=filename, mime="image/png")
+
 
