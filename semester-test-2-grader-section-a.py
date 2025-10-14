@@ -6,7 +6,7 @@ from PIL import Image
 import io
 import re
 
-st.title("Practical 1 - Coordinate Conversion")
+st.title("Semester Test 2 - Short Questions")
 st.info("""
 INSTRUCTIONS
 - Select the student submission
@@ -210,3 +210,4 @@ if image is not None:
 
     
     
+
