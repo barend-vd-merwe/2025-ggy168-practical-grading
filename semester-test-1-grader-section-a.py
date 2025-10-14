@@ -54,72 +54,75 @@ if image is not None:
     working_target = np.float32([[0,0],[IMG_WIDTH, 0],[IMG_WIDTH,IMG_HEIGHT],[0,IMG_HEIGHT]])
     transformation_matrix = cv.getPerspectiveTransform(working_img, working_target)
     warped_img = cv.warpPerspective(img, transformation_matrix, (IMG_WIDTH, IMG_HEIGHT))
-    cv.rectangle(img = warped_img, pt1 = (109,459), pt2 = (109+19,459+19), color = (0,0,255), thickness = 1)
-    cv.rectangle(img = warped_img, pt1 = (277,459), pt2 = (277+19,459+19), color = (0,0,255), thickness = 1)
 
     st.image(warped_img)
 
     st.header("Question 1")
-    q1_img = warped_img[34:34+319, 369:369+343]
+    q1_img = warped_img[58:58+194,328:328+382]
     st.image(q1_img)
         
-    q1a = st.number_input("Question 1 (a)", min_value = 0, max_value = 1)
-    q1b = st.number_input("Question 1 (b)", min_value = 0, max_value = 1)
-    q1c = st.number_input("Question 1 (c)", min_value = 0, max_value = 3)
+    q1a = st.number_input("Question 1 (a)", min_value = 0, max_value = 2)
+    q1b = st.number_input("Question 1 (b)", min_value = 0, max_value = 3)
 
     st.header("Question 2")
-    q2_img = warped_img[328:328+53, 0:0+712]
+    q2_img = warped_img[230:230+70,328:328+382]
     st.image(q2_img)
     
-    q2a = st.number_input("Question 2 (a)", min_value = 0, max_value = 1)
-    q2b = st.number_input("Question 2 (b)", min_value = 0, max_value = 1)
-    q2c = st.number_input("Question 2 (c)", min_value = 0, max_value = 1)
+    q2 = st.number_input("Question 2", min_value = 0, max_value = 2)
 
     st.header("Question 3")
-    q3_img = warped_img[378:378+53,0:712]
+    q3_img = warped_img[266:266+228,0:712]
     st.image(q3_img)
     
     q3a = st.number_input("Question 3 (a)", min_value = 0, max_value = 1)
-    q3b = st.number_input("Question 3 (b)", min_value = 0, max_value = 1)
+    q3b = st.number_input("Question 3 (b)", min_value = 0, max_value = 2)
 
     st.header("Question 4")
-    q4_img = warped_img[430:430+265, 0:712]
+    q4_img = warped_img[480:480+66,0:257]
     st.image(q4_img)
-    q4_point_a = st.number_input("Point (a) Zingg", min_value = 0, max_value = 2)
-    q4_point_b = st.number_input("Point (b) Zingg", min_value = 0, max_value = 2)
-    q4a = st.number_input("Question 4 (a) label", min_value = 0, max_value = 1)
-    q4b = st.number_input("Question 4 (b) label", min_value = 0, max_value = 1)
+    q4 = st.number_input("Question 4", min_value = 0, max_value = 2)
 
     st.header("Question 5")
-    q5_img = warped_img[487:487+219,317:317+395]
+    q5_img = warped_img[480:480+66,248:248+243]
     st.image(q5_img)
-    q5a = st.number_input("Question 5 (a)", min_value = 0, max_value = 1)
-    q5b = st.number_input("Question 5 (b)", min_value = 0, max_value = 2)
+    q5 = st.number_input("Question 5", min_value = 0, max_value = 2)
 
     st.header("Question 6")
-    q6_img = warped_img[691:691+103,0:712]
+    q6_img = warped_img[480:480+66,479:479+231]
     st.image(q6_img)
-    q6a = st.number_input("Question 6 (a)", min_value = 0, max_value = 3)
-    q6b = st.number_input("Question 6 (b)", min_value = 0, max_value = 1)
+    q6 = st.number_input("Question 6", min_value = 0, max_value = 1)
 
     st.header("Question 7")
-    q7_img = warped_img[739:739+159, 0:712]
+    q7_img = warped_img[521:521+66,0:264]
     st.image(q7_img)
-    q7a = st.number_input("Question 7 (a)", min_value = 0, max_value = 1)
-    q7b = st.number_input("Question 7 (b)", min_value = 0, max_value = 4)
+    q7 = st.number_input("Question 7", min_value = 0, max_value = 2)
 
     st.header("Question 8")
-    q8_img = warped_img[889:889+54,0:712]
+    q8_img = warped_img[513:513+228,0:712]
     st.image(q8_img)
     q8a = st.number_input("Question 8 (a)", min_value = 0, max_value = 1)
-    q8b = st.number_input("Question 8 (b)", min_value = 0, max_value = 1)
+    q8b = st.number_input("Question 8 (b)", min_value = 0, max_value = 2)
 
+    st.header("Question 9")
+    q9_img = warped_img[720:720+58,0:253]
+    st.image(q9_img)
+    q9 = st.number_input("Question 9", min_value = 0, max_value = 1)
 
+    st.header("Question 10")
+    q10_img = warped_img[720:720+58,246:246+234]
+    st.image(q10_img)
+    q10 = st.number_input("Question 10", min_value = 0, max_value = 2)
+
+    st.header("Question 11")
+    q11_img = warped_img[717:717+226,0:712]
+    st.image(q11_img)
+    q11a = st.number_input("Question 11 (a)", min_value = 0, max_value = 1)
+    q11b = st.number_input("Question 11 (b)", min_value = 0, max_value = 2)
 
 
     
     if st.button("Grade"):
-        final_grade = q1a + q1b + q1c + q2a + q2b + q2c + q3a + q3b + q4_point_a + q4_point_b + q4a + q4b + q5a + q5b + q6a + q6b + q7a + q7b + q8a + q8b
+        final_grade = q1a + q1b + q2 + q3a + q3b + q4 + q5 + q6 + q7 + q8a + q8b + q9 + q10 +q11a + q11b
 
         cv.putText(img=warped_img, text=f'{final_grade}', org=(260,37+51),
                    fontFace=cv.FONT_HERSHEY_SIMPLEX,
@@ -133,56 +136,45 @@ if image is not None:
         cv.putText(img=warped_img, text=f'Q1b : {q1b}', org=(331,40+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q1c  : {q1c}', org=(331,60+20),
+        cv.putText(img=warped_img, text=f'Q2  : {q2}', org=(331,60+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q2a : {q2a}', org=(331,80+20),
+        cv.putText(img=warped_img, text=f'Q3a : {q3a}', org=(331,80+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q2b : {q2b}', org=(331,100+20),
+        cv.putText(img=warped_img, text=f'Q3b : {q3b}', org=(331,100+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q2c  : {q2c}', org=(331,120+20),
+        cv.putText(img=warped_img, text=f'Q4  : {q4}', org=(331,120+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q3a  : {q3a}', org=(331,140+20),
+        cv.putText(img=warped_img, text=f'Q5  : {q5}', org=(331,140+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q3b  : {q3b}', org=(331,160+20),
+        cv.putText(img=warped_img, text=f'Q6  : {q6}', org=(331,160+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'q4a  : {q4_point_a + q4a}', org=(331,180+20),
+        cv.putText(img=warped_img, text=f'Q7  : {q7}', org=(331,180+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q4b : {q4_point_b + q4b}', org=(331,200+20),
+        cv.putText(img=warped_img, text=f'Q8a : {q8a}', org=(331,200+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q5a : {q5a}', org=(331,220+20),
+        cv.putText(img=warped_img, text=f'Q8b : {q8b}', org=(331,220+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q5b  : {q5b}', org=(331,240+20),
+        cv.putText(img=warped_img, text=f'Q9  : {q9}', org=(331,240+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q6a : {q6a}', org=(331,260+20),
+        cv.putText(img=warped_img, text=f'Q10 : {q10}', org=(331,260+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q6b: {q6b}', org=(331,280+20),
+        cv.putText(img=warped_img, text=f'Q11a: {q11a}', org=(331,280+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q7a: {q7a}', org=(331,300+20),
+        cv.putText(img=warped_img, text=f'Q11b: {q11b}', org=(331,300+20),
                    fontFace=cv.FONT_HERSHEY_PLAIN,
                    fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q7b: {q7b}', org=(331,320+20),
-                   fontFace=cv.FONT_HERSHEY_PLAIN,
-                   fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q8a: {q8a}', org=(331,340+20),
-                   fontFace=cv.FONT_HERSHEY_PLAIN,
-                   fontScale=1, color=(0, 0, 255), thickness=1)
-        cv.putText(img=warped_img, text=f'Q8b: {q8b}', org=(331,360+20),
-                   fontFace=cv.FONT_HERSHEY_PLAIN,
-                   fontScale=1, color=(0, 0, 255), thickness=1)
-
-        
         # student details
         cv.rectangle(img=warped_img, pt1=(210,6), pt2=(210+469,6+20),
                      color=(255,255,255), thickness=-1)
